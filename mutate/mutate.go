@@ -23,7 +23,6 @@
 package mutate
 
 import (
-	"compress/gzip"
 	"io"
 	"reflect"
 	"time"
@@ -34,6 +33,7 @@ import (
 	ispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/pkg/errors"
 	"golang.org/x/net/context"
+	gzip "github.com/youtube/vitess/go/cgzip"
 )
 
 func configPtr(c ispec.Image) *ispec.Image         { return &c }

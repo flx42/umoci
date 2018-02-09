@@ -19,7 +19,6 @@ package layer
 
 import (
 	"archive/tar"
-	"compress/gzip"
 	// Import is necessary for go-digest.
 	_ "crypto/sha256"
 	"fmt"
@@ -43,6 +42,7 @@ import (
 	rgen "github.com/opencontainers/runtime-tools/generate"
 	"github.com/pkg/errors"
 	"golang.org/x/net/context"
+	gzip "github.com/youtube/vitess/go/cgzip"
 )
 
 // UnpackLayer unpacks the tar stream representing an OCI layer at the given
